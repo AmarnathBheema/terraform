@@ -10,12 +10,12 @@ tags = {
  } 
 } 
 # Associating Route Table 
-resource "aws_route_table_association" "rt1" { 
+resource "aws_route_table_association" "route" { 
  subnet_id = "${aws_subnet.demosubnet.id}" 
  route_table_id = "${aws_route_table.route.id}" 
 } 
 # Associating Route Table 
-resource "aws_route_table_association" "rt2" { 
+resource "aws_route_table_association" "route" { 
  subnet_id = "${aws_subnet.demosubnet1.id}" 
  route_table_id = "${aws_route_table.route.id}" 
 }
