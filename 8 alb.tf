@@ -28,7 +28,7 @@ depends_on = [
  aws_instance.demoinstance1, 
 ] 
 } 
-resource "aws_lb_listener" "external-elb" { 
+resource "aws_lb_listener" "external-alb" { 
  load_balancer_arn = aws_lb.external-alb.arn 
  port = "80" 
  protocol = "HTTP" 
