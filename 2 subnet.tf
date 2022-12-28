@@ -42,7 +42,7 @@ tags = {
 resource "aws_subnet" "database-subnet-1" { 
  vpc_id = "${aws_vpc.demovpc.id}" 
  cidr_block = "${var.subnet5_cidr}" 
- availability_zone = "us-east-1a" 
+ availability_zone = "us-east-1c" 
 tags = { 
  Name = "Database Subnet 1" 
 } 
@@ -51,7 +51,7 @@ tags = {
 resource "aws_subnet" "database-subnet-2" { 
  vpc_id = "${aws_vpc.demovpc.id}" 
  cidr_block = "${var.subnet6_cidr}" 
- availability_zone = "us-east-1a" 
+ availability_zone = "us-east-1c" 
 tags = { 
  Name = "Database Subnet 1" 
 } 
