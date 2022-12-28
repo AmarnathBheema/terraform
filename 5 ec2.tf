@@ -7,7 +7,7 @@ resource "aws_instance" "demoinstance" {
  vpc_security_group_ids = ["${aws_security_group.demosg.id}"] 
  subnet_id = "${aws_subnet.public-subnet-1.id}" 
  associate_public_ip_address = true 
- user_data = "${file("data.sh")}" 
+ user_data = "${file("12 data.sh")}" 
 tags = { 
  Name = "My Public Instance" 
 } 
@@ -21,7 +21,7 @@ resource "aws_instance" "demoinstance1" {
  vpc_security_group_ids = ["${aws_security_group.demosg.id}"] 
  subnet_id = "${aws_subnet.public-subnet-2.id}" 
  associate_public_ip_address = true 
- user_data = "${file("data.sh")}" 
+ user_data = "${file("12 data.sh")}" 
 tags = { 
  Name = "My Public Instance 2" 
 } 
