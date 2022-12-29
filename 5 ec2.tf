@@ -31,9 +31,8 @@ resource "aws_instance" "demoinstance2" {
   key_name                    = "monday"
   vpc_security_group_ids      = ["${aws_security_group.demosg.id}"]
   subnet_id                   = aws_subnet.database-subnet-1.id
-  associate_public_ip_address = true
-  user_data                   = file("12 data.sh")
+  associate_public_ip_address = false
   tags = {
-    Name = "My Public Instance 2"
+    Name = "My Private Instance 1"
   }
 }
