@@ -25,7 +25,7 @@ resource "aws_instance" "demoinstance1" {
   }
 }
 # Creating 3rd EC2 instance in Public Subnet 
-resource "aws_instance" "demoinstance1" {
+resource "aws_instance" "demoinstance2" {
   ami                         = "ami-087c17d1fe0178315"
   instance_type               = "t2.micro"
   key_name                    = "monday"
