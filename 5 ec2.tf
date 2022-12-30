@@ -24,15 +24,3 @@ resource "aws_instance" "demoinstance1" {
     Name = "My Public Instance 2"
   }
 }
-# Creating 3rd EC2 instance in Public Subnet 
-resource "aws_instance" "demoinstance2" {
-  ami                         = "ami-087c17d1fe0178315"
-  instance_type               = "t2.micro"
-  key_name                    = "monday"
-  vpc_security_group_ids      = ["${aws_security_group.demosg.id}"]
-  subnet_id                   = aws_subnet.database-subnet-1.id
-  associate_public_ip_address = false
-  tags = {
-    Name = "My Private Instance 1"
-  }
-}
